@@ -1,0 +1,21 @@
+$content-direction: row;
+
+.layout {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+.layoutContain {
+ padding: 1.5em; 
+ flex-grow: 1;
+}
+
+@media screen and (max-width: 1200px) {
+    .layout {
+        flex-direction: column;
+    }
+    body {
+        overflow:auto;
+    }
+}
