@@ -1,7 +1,19 @@
 import scss from './dashboard.module.scss';
+
+const statsData = [
+  { label: 'WEB & EXTERNAL', value: 23 },
+  { label: 'MOBILE APPS', value: 3 },
+  { label: 'INTERNAL', value: 23 },
+  { label: 'CLOUD ASSETS', value: 10 },
+  { label: 'SOURCE CODE', value: 10 },
+  { label: 'SOCIAL ENGINEERING', value: 62 }
+];
+
+
 export default function Dashboard() {
-    return (
-      <div className={scss.dashboardContainer}>
+    return ( 
+      //header
+      <div className='container-main'>
         <div className={scss.scanSection}>
           <img src="/images/virus.png" alt="scanner-virus" />
           <div className={scss.scanInfo}>
@@ -17,34 +29,16 @@ export default function Dashboard() {
   
         <div className={scss.statsSection}>
           <div className={scss.statsGrid}>
-            <div className={scss.statCard}>
-              <h2 className={scss.statNumber}>23</h2>
-              <p className={scss.statLabel}>WEB & EXTERNAL</p>
-            </div>
-            <div className={scss.statCard}>
-              <h2 className={scss.statNumber}>3</h2>
-              <p className={scss.statLabel}>MOBLE APPS</p>
-            </div>
-            <div className={scss.statCard}>
-              <h2 className={scss.statNumber}>23</h2>
-              <p className={scss.statLabel}>INTERNAL</p>
-            </div>
-            <div className={scss.statCard}>
-              <h2 className={scss.statNumber}>10</h2>
-              <p className={scss.statLabel}>CLOUD ASSETS</p>
-            </div>
-            <div className={scss.statCard}>
-              <h2 className={scss.statNumber}>10</h2>
-              <p className={scss.statLabel}>SOURCE CODE</p>
-            </div>
-            <div className={scss.statCard}>
-              <h2 className={scss.statNumber}>62</h2>
-              <p className={scss.statLabel}>SOCIAL ENGINEERING</p>
-            </div>
+            {statsData.map((data, i)=>(
+                <div key={i} className={scss.statCard}>
+                  <h2 className={scss.statNumber}>{data.value}</h2>
+                  <span className={scss.statLabel}>{data.label}</span>
+                </div>
+              ))}
           </div>
   
           <div className={scss.recommendedPlan}>
-            <h2 className={scss.planTitle}>Plan recomendado</h2>
+            <h2>Plan recomendado</h2>
             <p className={scss.planDescription}>
               Considerando la cantidad de recursos que has dado de alta en la superficie de ataque, hemos creado una
               recomendación que se adapte a tus necesidades.
@@ -56,37 +50,37 @@ export default function Dashboard() {
         <div className={scss.collaboratorsSection}>
           <div className={scss.collaboratorsInfo}>
             <div className={scss.sectionHeader}>
-              <div className={scss.iconUsers}></div>
-              <h2 className={scss.sectionTitle}>Colaboradores</h2>
+              <img className='imgColaborators' src='/images/user-icon.png' alt="icon-user" />
+              <h2>Colaboradores</h2>
             </div>
             <ul className={scss.collaboratorsList}>
               <li>- Añada colaboradores a su equipo</li>
               <li>- Resuelva las vulnerabilidades más fácil.</li>
               <li>- No hay un máximo de colaboradores.</li>
-              <li className={scss.addCollaborator}>- Añadir un colaborador.</li>
+              <li><a className={scss.addCollaborator} href="#">- Añadir un colaborador.</a></li>
             </ul>
           </div>
   
           <div className={scss.collaboratorsTable}>
             <div className={scss.tableHeader}>
-              <div className={scss.tableCell}>Email</div>
-              <div className={scss.tableCell}>Member role</div>
+              <h2 className={scss.tableCell}>Email</h2>
+              <h2 className={scss.tableCell}>Member role</h2>
             </div>
             <div className={scss.tableRow}>
-              <div className={scss.tableCell}>chris@codefend.com</div>
-              <div className={scss.tableCell}>Founder</div>
+              <p className={scss.tableCell}>chris@codefend.com</p>
+              <p className={scss.tableCell}>Founder</p>
             </div>
             <div className={scss.tableRow}>
-              <div className={scss.tableCell}>edd@codefend.com</div>
-              <div className={scss.tableCell}>Collaborator</div>
+              <p className={scss.tableCell}>edd@codefend.com</p>
+              <p className={scss.tableCell}>Collaborator</p>
             </div>
             <div className={scss.tableRow}>
-              <div className={scss.tableCell}>hernan@codefend.com</div>
-              <div className={scss.tableCell}>Collaborator</div>
+              <p className={scss.tableCell}>hernan@codefend.com</p>
+              <p className={scss.tableCell}>Collaborator</p>
             </div>
             <div className={scss.tableRow}>
-              <div className={scss.tableCell}>nacho@codefend.com</div>
-              <div className={scss.tableCell}>Collaborator</div>
+              <p className={scss.tableCell}>nacho@codefend.com</p>
+              <p className={scss.tableCell}>Collaborator</p>
             </div>
           </div>
         </div>

@@ -55,23 +55,23 @@ export default function Footer() {
             <span className={scss.highlight}>{issuesData.open}</span>
             <span className={scss.total}>/{issuesData.total}</span>
           </div>
-          <p className={scss.statLabel}>OPEN ISSUES</p>
+          <span className={scss.statLabel}>OPEN ISSUES</span>
         </div>
 
         <div className={scss.statCard}>
           <div className={scss.statNumber}>
-            <span>{issuesData.fixed}</span>
+            <span className={scss.stats}>{issuesData.fixed}</span>
             <span className={scss.total}>/{issuesData.total}</span>
           </div>
-          <p className={scss.statLabel}>FIXED ISSUES</p>
+          <span className={scss.statLabel}>FIXED ISSUES</span>
         </div>
 
         <div className={scss.statCard}>
           <div className={scss.statNumber}>
-            <span>{issuesData.total}</span>
+            <span className={scss.stats}>{issuesData.total}</span>
             <span className={scss.total}>/{issuesData.total}</span>
           </div>
-          <p className={scss.statLabel}>TOTAL ISSUES</p>
+          <span className={scss.statLabel}>TOTAL ISSUES</span>
         </div>
       </div>
 
@@ -118,7 +118,7 @@ export default function Footer() {
 
         <div className={scss.statCard}>
           <div className={scss.statNumber}>
-            <span>{findingsData.parsed}</span>
+            <span className={scss.stats}>{findingsData.parsed}</span>
             <span className={scss.total}>/{findingsData.total}</span>
           </div>
           <p className={scss.statLabel}>PARSED FINDINGS</p>
@@ -126,7 +126,7 @@ export default function Footer() {
 
         <div className={scss.statCard}>
           <div className={scss.statNumber}>
-            <span>{findingsData.estimatedTime}</span>
+            <span className={scss.stats}>{findingsData.estimatedTime}</span>
           </div>
           <p className={scss.statLabel}>EST. TIME TO FINISH</p>
         </div>

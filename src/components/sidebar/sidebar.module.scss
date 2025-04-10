@@ -18,8 +18,8 @@ $sidebar-item-spacing: 8px;
 .sidebar {
   width: $sidebar-width;
   min-width: 180px;
-  height: 100%;
   max-width: 500px;
+  min-height: 100vh;
   background-color: var(--bg-color);
   z-index: 99;
   transition: left 0.3s ease;
@@ -28,7 +28,6 @@ $sidebar-item-spacing: 8px;
       position: absolute;
       margin-top: 40px;
       left: -100%;
-      
   }
 
 

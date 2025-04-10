@@ -6,8 +6,8 @@
   --margin-general: 1rem;
   --max-witdh: 1000px;
   --text-color-light: rgb(139, 137, 137);
-  --text-color-1: rgb(105, 104, 104);
-  --text-color-2: #333;
+  --text-color-1: rgb(86, 86, 86);
+  --text-color-2: #3f3f3f;
   --text-color-3-active: #f05151;
   --text-color-4: #fff;
 
@@ -73,10 +73,13 @@ h3 {
   color: var(--text-color-2);
 }
 
-p, a {
+p, a, li {
   color: var(--text-color-1);
   text-decoration: inherit;
   font-size: 16px;
+}
+p {
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 768px) {
