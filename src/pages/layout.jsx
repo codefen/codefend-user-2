@@ -9,6 +9,7 @@ const Layout = () => {
         <div className={scss.layout} >
             <Sidebar />
             <div className={scss.layoutContent}>
+            <div className="overlay"></div>
                 <Outlet />     
                 <Footer />
             </div>

@@ -4,7 +4,7 @@
   --h2-small: 1.4em;
   --h2-large: 2.4em;
   --margin-general: 1rem;
-  --max-witdh: 1000px;
+  --max-witdh: 1200px;
   --text-color-light: rgb(139, 137, 137);
   --text-color-1: rgb(86, 86, 86);
   --text-color-2: #3f3f3f;
@@ -16,6 +16,9 @@
   --bg-color-btn: rgb(214, 63, 63);
 
   --br-radius: 6px;
+
+  --sidebar-width: 210px;
+  --navbar-height: 50px;
 }
 
 @font-face {
@@ -82,22 +85,6 @@ p {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: calc(var(--h1-small) - 1em);
-  }
-  h2 {
-    font-size: calc(var(--h2-small) - .3em);
-  }
-  h3 {
-    color: var(--text-color-2);
-    font-size:medium;
-  }
-  p,a {
-    font-size: 14px;
-  }
-}
-
 a:hover {
   color: var(--text-color-3-active) !important;
   font-weight: 500;
@@ -106,14 +93,10 @@ a:hover {
 .container-main {
   flex: 1;
   max-width: var(--max-witdh);
-  min-width: 650px;
-  margin: 0 auto;
+  min-width: 750px;
   overflow: hidden;
   padding: 1.5em; 
   flex-grow: 1;
-  @media screen and (max-width: 768px) {
-    min-width: none;
-  }
   /* padding: var(--margin-general); */
 }
 
@@ -151,6 +134,46 @@ a:hover {
 .input-primary::placeholder {
   color: var(--text-color-light);
   font-size: 17px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: calc(var(--h1-small) - 1em);
+  }
+  h2 {
+    font-size: calc(var(--h2-small) - .3em);
+  }
+  h3 {
+    color: var(--text-color-2);
+    font-size:medium;
+  }
+  p,a {
+    font-size: 14px;
+  }
+
+  .container-main {
+    min-width: unset;
+  }
 }
 
 

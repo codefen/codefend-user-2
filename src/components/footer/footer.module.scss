@@ -10,17 +10,15 @@ $stat-number-size: 40px;
 
 // Dashboard container
 .dashboard {
-
   color: var(--text-color-2);
   max-width: 570px;
   min-width: 500px;
-  //flex-shrink: 0;
   margin: 0 auto;
   padding: 20px;
   flex: 1;
-  // background-color: #f5f5f5;
   @media screen and (max-width: 1200px) {
-    display: flex;
+    // display: flex;
+    // flex-direction: column;
     min-width: none;
   }
 }

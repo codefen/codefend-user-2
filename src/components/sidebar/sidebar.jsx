@@ -51,12 +51,15 @@ const Sidebar = () => {
 
   const toggleBar = () => {
     const element = document.getElementById('sidebar');
+    const overlay = document.querySelector('.overlay');
     if (!isOpen) {
       element.style.left = `0%`;
-      console.log(element.style)
-      setIsOpen(true)
+      overlay.classList.add('active');
+      console.log(element.style);
+      setIsOpen(true);
     } else {
       element.style.left = `-100%`;
+      overlay.classList.remove('active');
       setIsOpen(false)
     }
   }
