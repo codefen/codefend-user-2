@@ -68,7 +68,7 @@ const Sidebar = () => {
   return (
     <>
       <div id="navbar" className={scss.navbar}>
-        <button onClick={toggleBar} type="button">{!isOpen ? <BarsIcon /> : <CloseIcon />}</button>
+        <button className={scss.navButton} onClick={toggleBar} type="button">{!isOpen ? <BarsIcon /> : <CloseIcon />}</button>
       </div>
       <div id="sidebar" className={scss.sidebar}>
         {sidebarSections.map((section, sectionIndex) => (
@@ -76,7 +76,7 @@ const Sidebar = () => {
             <h2 className={scss.title}>{section.title}</h2>
             <ul className={scss.menu}>
               {section.items.map((item, itemIndex) => (
-                <li key={itemIndex} className={scss.item}>
+                <li key={itemIndex}>
                   <NavLink
                     to={item.path}
                     className={({ isActive }) => (isActive ? `${scss.link} ${scss.active}` : `${scss.link}`)}

@@ -12,15 +12,16 @@ $stat-number-size: 40px;
 .dashboard {
 
   color: var(--text-color-2);
-  font-family: 'Arial', sans-serif;
   max-width: 570px;
-  min-width: 350px;
+  min-width: 500px;
   //flex-shrink: 0;
   margin: 0 auto;
   padding: 20px;
+  flex: 1;
   // background-color: #f5f5f5;
   @media screen and (max-width: 1200px) {
     display: flex;
+    min-width: none;
   }
 }
 
@@ -86,22 +87,11 @@ $stat-number-size: 40px;
 
 .riskTable {
   flex: 1;
-  
-  .tableHeader {
-    display: flex;
-    justify-content: space-evenly;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: $text-color;
-    font-size: 14px;
+  th {
+    color: black;
   }
-  
-  .tableRow {
-    display: flex;
-    justify-content: space-evenly;
-    margin-bottom: 8px;
-    font-size: 14px;
-    text-transform: capitalize;
+  th, td {
+      padding: .4em 1em;
   }
 }
 

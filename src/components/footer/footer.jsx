@@ -78,7 +78,37 @@ export default function Footer() {
       {/* Risk Level Chart */}
       <div className={scss.chartCard}>
         <div className={scss.riskTable}>
-          <div className={scss.tableHeader}>
+        <table>
+          <thead>
+            <tr>
+              <th>Risk level</th>
+              <th>issues count</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>critical</td>
+              <td>05/05%</td>
+            </tr>
+            <tr>
+              <td>elevated</td>
+              <td>05/05%</td>
+            </tr>
+            <tr>
+              <td>medium</td>
+              <td>10/10%</td>
+            </tr>
+            <tr>
+              <td>low</td>
+              <td>20/20%</td>
+            </tr>
+            <tr>
+              <td>intel</td>
+              <td>60/60%</td>
+            </tr>
+          </tbody>
+        </table>
+          {/* <div className={scss.tableHeader}>
             <div>Risk level</div>
             <div>Issues count</div>
           </div>
@@ -89,7 +119,7 @@ export default function Footer() {
                 {risk.count} / {risk.percentage}
               </div>
             </div>
-          ))}
+          ))} */}
         </div>
         <div className={scss.chartContainer}>
           <Doughnut data={data}/>

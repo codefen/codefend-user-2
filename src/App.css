@@ -104,9 +104,16 @@ a:hover {
 }
 
 .container-main {
+  flex: 1;
   max-width: var(--max-witdh);
+  min-width: 650px;
   margin: 0 auto;
   overflow: hidden;
+  padding: 1.5em; 
+  flex-grow: 1;
+  @media screen and (max-width: 768px) {
+    min-width: none;
+  }
   /* padding: var(--margin-general); */
 }
 

@@ -6,9 +6,16 @@ $content-direction: row;
     flex-direction: row;
     position: relative;
 }
-.layoutContain {
- padding: 1.5em; 
- flex-grow: 1;
+// .layoutContain {
+//     padding: 1.5em; 
+//     flex-grow: 1;
+// }
+
+.layoutContent {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1200px) {

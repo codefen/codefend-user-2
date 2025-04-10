@@ -10,21 +10,37 @@ $sidebar-item-spacing: 8px;
 .navbar {
   display: none;
   background-color: #fff;
-  height: 40px;
   @media screen and (max-width: 1200px) {  
     display: block;
   }
 }
+.navButton {
+  border: none;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  &:hover {
+    background-color: #f0f0f0;
+  }
+  &:active {
+    background-color: #e0dede;
+  }
+}
 .sidebar {
   width: $sidebar-width;
-  min-width: 180px;
   max-width: 500px;
-  min-height: 100vh;
+  min-width: 180px;
+  height: 100vh;
+  overflow-x: hidden;
   background-color: var(--bg-color);
   z-index: 99;
   transition: left 0.3s ease;
+  position: static;
+  
   
   @media screen and (max-width: 1200px) {
+      height: 100%;
       position: absolute;
       margin-top: 40px;
       left: -100%;
@@ -49,16 +65,12 @@ $sidebar-item-spacing: 8px;
     margin: 0;
     
   }
-  .item {
-    margin-bottom: $sidebar-item-spacing;
-  }
   
   .link {
     display: block;
-    padding: 8px 20px;
+    padding: 13px 20px;
     color: $sidebar-text-color;
     text-decoration: none;
-    font-size: 14px;
     transition: all 0.2s ease;
     
     &:hover {

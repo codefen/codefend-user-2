@@ -8,10 +8,10 @@ const Layout = () => {
     return (
         <div className={scss.layout} >
             <Sidebar />
-            <div className={scss.layoutContain}>
+            <div className={scss.layoutContent}>
                 <Outlet />     
+                <Footer />
             </div>
-            <Footer />
         </div>
     )
 }
