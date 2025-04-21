@@ -2,7 +2,8 @@ export const orders = [
     {
       id: 1,
       date: "1/1 del 2025",
-      description: "Suscripción mensual automatica menor",
+      description: "Suscripción mensual",
+      level:"automatica menor",
       renewal: "1 mes",
       price: "$29",
       status: "Paid",
@@ -10,7 +11,8 @@ export const orders = [
     {
       id: 2,
       date: "1/2 del 2025",
-      description: "Suscripción mensual automatica intermedia",
+      description: "Suscripción mensual",
+      level:"automatica intermedia",
       renewal: "1 mes",
       price: "$59",
       status: "Paid",
@@ -18,7 +20,8 @@ export const orders = [
     {
       id: 3,
       date: "1/3 del 2025",
-      description: "Suscripción mensual automatica mayor",
+      description: "Suscripción mensual",
+      level:"automatica mayor",
       renewal: "1 mes",
       price: "$89",
       status: "Paid",
@@ -26,7 +29,8 @@ export const orders = [
     {
       id: 4,
       date: "1/4 del 2025",
-      description: "Suscripción mensual hacker menor",
+      description: "Suscripción mensual",
+      level:"hacker menor",
       renewal: "1 mes",
       price: "$299",
       status: "Paid",
@@ -34,7 +38,8 @@ export const orders = [
     {
       id: 5,
       date: "1/5 del 2025",
-      description: "Suscripción mensual hacker menor",
+      description: "Suscripción mensual",
+      level:"hacker menor",
       renewal: "1 mes",
       price: "$299",
       status: "Unpaid",
@@ -42,7 +47,8 @@ export const orders = [
     {
       id: 6,
       date: "1/6 del 2025",
-      description: "Suscripción mensual hacker intermedia",
+      description: "Suscripción mensual",
+      level:"hacker intermedia",
       renewal: "1 mes",
       price: "$599",
       status: "Unpaid",
@@ -50,7 +56,8 @@ export const orders = [
     {
       id: 7,
       date: "1/7 del 2025",
-      description: "Suscripción mensual hacker avanzada",
+      description: "Suscripción mensual",
+      level:"hacker avanzada",
       renewal: "1 mes",
       price: "$899",
       status: "Paid",
@@ -58,7 +65,8 @@ export const orders = [
     {
       id: 8,
       date: "1/8 del 2025",
-      description: "Contratación única hacker menor",
+      description: "Contratación única",
+      level:"hacker menor",
       renewal: "-",
       price: "$2,990",
       status: "Paid",
@@ -66,7 +74,8 @@ export const orders = [
     {
       id: 9,
       date: "1/9 del 2025",
-      description: "Contratación única hacker intermedia",
+      description: "Contratación única",
+      level:"hacker intermedia",
       renewal: "-",
       price: "$5,990",
       status: "Paid",
@@ -74,7 +83,8 @@ export const orders = [
     {
       id: 10,
       date: "1/10 del 2025",
-      description: "Contratación única hacker avanzada",
+      description: "Contratación única",
+      level:"hacker avanzada",
       renewal: "-",
       price: "$8,990",
       status: "Paid",

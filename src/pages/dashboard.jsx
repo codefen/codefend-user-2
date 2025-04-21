@@ -17,13 +17,13 @@ export default function Dashboard() {
         <div className={scss.scanSection}>
           <img src="/images/virus.png" alt="scanner-virus" />
           <div className={scss.scanInfo}>
-            <h2 className={scss.scanTitle}>Exploración de superficie en curso</h2>
-            <p className={scss.scanDescription}>
+            <h2>Exploración de superficie en curso</h2>
+            <p>
               Aún no hemos detectado vulnerabilidades ni amenazas en sus sistemas, pero hay un scanneo automático
               procesando información, apenas se localice una, vos y tu equipo serán notificados.{" "}
-              <span className={scss.highlight}>En la espera, añadamos recursos.</span>
+              <span>En la espera, añadamos recursos.</span>
             </p>
-            <button className='btn'>Añadir recursos para calcular precios</button>
+            <button className='btn black'>Añadir recursos para calcular precios</button>
           </div>
         </div>
   

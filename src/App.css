@@ -1,23 +1,25 @@
 #root {
   --h1-small: 3.0em;
   --h1-large: 3.4em;
-  --h2-small: 1.4em;
+  --h2-small: 1.3em;
   --h2-large: 2.4em;
   --margin-general: 1rem;
-  --max-witdh: 1200px;
+  --max-witdh: 1210px;
+  --max-width-layout: 1795px;
   --text-color-light: rgb(139, 137, 137);
   --text-color-1: rgb(86, 86, 86);
   --text-color-2: #3f3f3f;
   --text-color-3-active: #f05151;
   --text-color-4: #fff;
 
+  --bg-color-main: #f1efef;
   --bg-color: #fff;
-  --bg-color-2: #e9e7e7;
+  --bg-color-card: #fdfcfc;
   --bg-color-btn: rgb(214, 63, 63);
 
   --br-radius: 6px;
 
-  --sidebar-width: 210px;
+  --sidebar-width: 225px;
   --navbar-height: 50px;
 }
 
@@ -48,38 +50,42 @@
 
 body {
   font-family: Questrial;
-  background-color: #f0efef !important;
+  background-color: #f6f6f6 !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-synthesis-weight: none;
+  /* font-synthesis-weight: none; */
   text-rendering: optimizeLegibility;
   padding: 0px;
   margin: 0px;
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: 100%;
 }
 
-span,h1,h2,h3 {
+span,h1,h2,h3, th {
   font-family: Roboto Bold;
+  color: var(--text-color-2);
+
+}
+
+th {
+  
 }
 
 h1 {
-  color: var(--text-color-2);
   font-size: var(--h1-small);
 }
 h2 {
-  color: var(--text-color-2);
   font-size: var(--h2-small);
 }
 h3 {
   margin: 0;
-  color: var(--text-color-2);
 }
 
-p, a, li {
+p, a, li, td, th {
   color: var(--text-color-1);
   text-decoration: inherit;
-  font-size: 16px;
+  font-size: 18px;
 }
 p {
   line-height: 1.5;
@@ -95,19 +101,19 @@ a:hover {
   max-width: var(--max-witdh);
   min-width: 750px;
   overflow: hidden;
-  padding: 1.5em; 
+  padding: 0 1.5em 1.5em 1.5em; 
   flex-grow: 1;
   /* padding: var(--margin-general); */
 }
 
 .btn {
-  background: linear-gradient(to right,#ff5b58 , #ff3034);
+  background: linear-gradient(to right,#ff7573 , #ff3034);
   max-width: 300px;
   color: var(--text-color-4);
   color: white;
   border: none;
   border-radius: 6px;
-  padding: 15px 15px;
+  padding: 17px 15px;
   font-size: 15px;
   font-weight: bold;
   cursor: pointer;
@@ -116,6 +122,10 @@ a:hover {
 
 .btn:hover {
   background: linear-gradient(to right, #ff3034, #ff5b58);
+}
+
+.black {
+  background: #363636 !important;
 }
 
 .input-primary {

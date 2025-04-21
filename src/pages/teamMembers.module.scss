@@ -6,10 +6,10 @@
   
   .header {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
-    gap: 3em;
-    padding: 2rem;
+    gap: 4em;
+    padding: 3rem;
     background-color: var(--bg-color);
     border-radius: var(--br-radius);
     
@@ -21,43 +21,45 @@
   }
 
   .imgTeam {
-    height: 150px;
-    width: 180px;
+    height: 10rem;
+    width: 13rem;
   }
   
-  .purchaseOrdersTableContainer {
+  .tableContainer {
     overflow-x: auto;
+      .ordersTable {
+        padding: 1.5rem;
+        border-radius: var(--br-radius);
+        margin-top: 1em;
+        width: 100%;
+        // border-collapse: collapse;
+        background-color: var(--bg-color);
+        a {
+          color: var(--text-color-3-active);
+          text-decoration: underline;
+        }
+        th, td {
+          padding: 1rem;
+          text-align: left;
+          // border-bottom: 1px solid #f0f0f0;
+        }
+        
+        th {
+          font-weight: 500;
+          color: #666;
+        }
+        
+        td {
+          color: var(--text-color-1);
+        }
+        
+        tr:last-child td {
+          border-bottom: none;
+        }
+        
+    }
   }
   
-  .purchaseOrdersTable {
-    border-radius: var(--br-radius);
-    margin-top: 1em;
-    width: 100%;
-    border-collapse: collapse;
-    background-color: var(--bg-color);
-    
-    th, td {
-      padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid #f0f0f0;
-    }
-    
-    th {
-      font-weight: 500;
-      color: #666;
-      font-size: 0.875rem;
-    }
-    
-    td {
-      color: var(--text-color-1);
-      font-size: 0.875rem;
-    }
-    
-    tr:last-child td {
-      border-bottom: none;
-    }
-    
-}
 // .paid {
 //   color: #34c759;
 // }

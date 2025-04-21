@@ -31,7 +31,7 @@ export default function Orders() {
               {orders.map((order) => (
                 <tr key={order.id}>
                   <td>{order.date}</td>
-                  <td>{order.description}</td>
+                  <td>{order.description} <strong>{order.level}</strong></td>
                   <td>{order.renewal}</td>
                   <td>{order.price}</td>
                   <td className={order.status.toLowerCase()}>{order.status}</td>

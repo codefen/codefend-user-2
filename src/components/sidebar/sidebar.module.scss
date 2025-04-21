@@ -38,7 +38,9 @@ $sidebar-section-spacing: 20px;
   z-index: 99;
   transition: left 0.3s ease;
   position:fixed;
-  left: 0;
+  padding: 2.1rem 0 0 1.1rem;
+  line-height: 1;
+  // left: 0;
   
   
   @media screen and (max-width: 1200px) {
@@ -67,23 +69,55 @@ $sidebar-section-spacing: 20px;
     margin: 0;
   }
   
+
+  //refactorizar codigo
   .link {
     display: block;
     padding: 13px 20px;
     text-decoration: none;
     transition: all 0.2s ease;
-    
+    position: relative;
     &:hover {
-      background-color: $sidebar-hover-bg;
+      &:hover {
+        color: var(--text-color-3-active) !important;
+        &::after {
+          content: '';
+          z-index: -1;
+          width: 120%;
+          height: 100%;
+          position: absolute;
+          background-color: $sidebar-hover-bg;
+          left: -10%;
+          top: 0;
+        }
+      }
     }
     
-    &.active {
-      background-color: $sidebar-active-bg;
-      color: $sidebar-active-text;
-    }
+    // &.active {
+    //   background-color: $sidebar-active-bg;
+    //   color: $sidebar-active-text;
+    // }
   }
   .active {
-    background-color: $sidebar-active-bg;
-    color: $sidebar-active-text;
-  }
+    color: var(--text-color-4) !important;
+      &::before {
+        content: '';
+        z-index: -1;
+        width: 120%;
+        height: 100%;
+        position: absolute;
+        background-color: $sidebar-active-bg;
+        left: -10%;
+        top: 0;
+      }
+    }
 }
+
+
+
+
+// &.active {
+//   background-color: $sidebar-active-bg;
+//   color: $sidebar-active-text;
+// }
+// }

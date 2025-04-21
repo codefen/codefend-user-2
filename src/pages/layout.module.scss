@@ -3,6 +3,8 @@ $content-direction: row;
 .layout {
     overflow: hidden;
     position: relative;
+    max-width: var(--max-width-layout);
+    margin: auto;
 }
 
 .layoutContent {
@@ -10,8 +12,8 @@ $content-direction: row;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-left: var(--sidebar-width);
-
+    margin-left: calc(var(--sidebar-width) + 2.5rem);
+    margin-top:  2rem;
 }
 
 @media screen and (max-width: 1200px) {

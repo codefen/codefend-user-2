@@ -11,11 +11,20 @@ const riskData = [
   { level: "intel", count: 60, percentage: "60%", color: "#e6e6e6" },
 ]
 // Data for the dashboard
-const issuesData = {
-  open: 3,
-  fixed: 17,
-  total: 20,
-}
+const issuesData = [
+  {
+    number: 3,
+    label: 'open issues'
+  },
+  {
+    number: 3,
+    label: 'fixed issues'
+  },
+  {
+    number: 20,
+    label: 'total issues'
+  }
+]
 
 const findingsData = {
   total: 26,
@@ -47,32 +56,20 @@ const data = {
 export default function Footer() {
 
   return (
-    <div className={scss.dashboard}>
+    <div className={scss.footer}>
       {/* Issues Stats */}
       <div className={scss.statsRow}>
-        <div className={scss.statCard}>
-          <div className={scss.statNumber}>
-            <span className={scss.highlight}>{issuesData.open}</span>
-            <span className={scss.total}>/{issuesData.total}</span>
+      {
+        issuesData.map((issue, index) => (
+          <div key={index} className={scss.statCard}>
+            <div className={scss.statNumber}>
+              <span className={scss.stats}>{issue.number}</span>
+              <span className={scss.total}>/20</span>
+            </div>
+            <span className={scss.statLabel}>{issue.label}</span>
           </div>
-          <span className={scss.statLabel}>OPEN ISSUES</span>
-        </div>
-
-        <div className={scss.statCard}>
-          <div className={scss.statNumber}>
-            <span className={scss.stats}>{issuesData.fixed}</span>
-            <span className={scss.total}>/{issuesData.total}</span>
-          </div>
-          <span className={scss.statLabel}>FIXED ISSUES</span>
-        </div>
-
-        <div className={scss.statCard}>
-          <div className={scss.statNumber}>
-            <span className={scss.stats}>{issuesData.total}</span>
-            <span className={scss.total}>/{issuesData.total}</span>
-          </div>
-          <span className={scss.statLabel}>TOTAL ISSUES</span>
-        </div>
+        ))
+      }
       </div>
 
       {/* Risk Level Chart */}
@@ -130,9 +127,9 @@ export default function Footer() {
       <div className={scss.scanCard}>
         <h3 className={scss.scanTitle}>Scanneo en curso</h3>
         <p className={scss.scanDescription}>
-          Los scanners automaticos están analizando uno de sus recursos web: <strong>{scanData.url}</strong>
+          Los scanners automaticos están analizando uno de sus recursos web: <strong>www.lanacion.com</strong>
         </p>
-        <div className={scss.progressBar}>
+        <div className={scss.strong}>
           <div className={scss.progressFill} style={{ width: `${scanData.progress}%` }}></div>
         </div>
       </div>
@@ -143,7 +140,7 @@ export default function Footer() {
           <div className={scss.statNumber}>
             <span className={scss.highlight}>{findingsData.total}</span>
           </div>
-          <p className={scss.statLabel}>TOTAL FINDINGS</p>
+          <span className={scss.statLabel}>TOTAL FINDINGS</span>
         </div>
 
         <div className={scss.statCard}>
@@ -151,14 +148,14 @@ export default function Footer() {
             <span className={scss.stats}>{findingsData.parsed}</span>
             <span className={scss.total}>/{findingsData.total}</span>
           </div>
-          <p className={scss.statLabel}>PARSED FINDINGS</p>
+          <span className={scss.statLabel}>PARSED FINDINGS</span>
         </div>
 
         <div className={scss.statCard}>
           <div className={scss.statNumber}>
             <span className={scss.stats}>{findingsData.estimatedTime}</span>
           </div>
-          <p className={scss.statLabel}>EST. TIME TO FINISH</p>
+          <span className={scss.statLabel}>EST. TIME TO FINISH</span>
         </div>
       </div>
     </div>

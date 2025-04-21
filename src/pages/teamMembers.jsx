@@ -10,13 +10,13 @@ export default function Team() {
           <img className={scss.imgTeam} src="/images/user-icon.png" alt="icon-user"/>
           <div className={scss.headerContent}>
             <h2>Colaboradores y miembros</h2>
-            <p>Añada colaboradores y miembros de su empresa para resolver las vulnerabilidades localizadas con mayor facilidad. No hay un máximo de colaboradores!</p>
+            <p>Añada colaboradores y miembros de su empresa para resolver las vulnerabilidades localizadas con mayor facilidad. <strong>No hay un máximo de colaboradores!</strong></p>
             <button className='btn'>Añadir un colaborador a la empresa</button>
           </div>
         </div>
 
-        <div className={scss.purchaseOrdersTableContainer}>
-          <table className={scss.purchaseOrdersTable}>
+        <div className={scss.tableContainer}>
+          <table className={scss.ordersTable}>
             <thead>
               <tr>
                 <th>Id</th>
@@ -33,7 +33,7 @@ export default function Team() {
                   <td>{member.email}</td>
                   <td>{member.fullName}</td>
                   <td>{member.role}</td>
-                  <td className={member.status.toLowerCase()}><a href="#">revoke status</a></td>
+                  <td className={member.status.toLowerCase()}><a href="#">revoke access</a></td>
                 </tr>
               ))}
             </tbody>
